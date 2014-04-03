@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+            
+        <title>Portfolio</title>
+            
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{{ asset('bundles/foxportfolio/css/signin.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/foxportfolio/css/bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/foxportfolio/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/foxportfolio/css/cover.css') }}" />  <!--black theme-->
+        <link rel="icon" href="{{ asset('bundles/foxportfolio/favicon.ico') }}" />
+            
+        <!-- Custom styles for this template -->
+        <link href="{{ asset('bundles/foxportfolio/css/navbar.css') }}" rel="stylesheet">
+            
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+            
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+        
+    <body>
+        
+        <div class="container">
+            
+            <!-- Static navbar -->
+            <div class="navbar navbar-inverse navbar-default" role="navigation">
+                <!-- <div class="navbar navbar-default" role="navigation">-->
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">Porfolio</div>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li {%if page=="accueil" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_index')}}">Accueil</a></li>
+                            <li {%if page=="curriculumvitae" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_curriculumvitae')}}">CV</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stages<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li {%if page=="stage1" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_stage')}}">Stage n°1</a></li>
+                                    <li class="divider"></li>
+                                    <li {%if page=="stage2" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_stagedeux')}}">Stage n°2</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projets<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li {%if page=="stifco" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_stifco')}}">Mission StifCo</a></li>
+                                    <li class="divider"></li>
+                                    <li {%if page=="symfony" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_symfony')}}">Mission Symfony2</a></li>
+                                    <li class="divider"></li>
+                                    <li {%if page=="qog" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_qog')}}">Projet QoG</a></li>
+                                    <li class="divider"></li>
+                                    <li class="divider"></li>
+                                    <li {%if page=="tableau" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_tableau')}}">Tableau de compétences</a></li>
+                                    <li class="divider"></li>
+                                    <li {%if page=="veille" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_veille')}}">Veille technologique</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li {%if page=="contact" %}class="active"{%endif%}><a href="{{ path('fox_portfolio_default_contact')}}">Contact</a></li>
+                            <li><a href="https://github.com/Soukatsoui" onclick="window.open(this.href); return false;"><img src="{{ asset('bundles/foxportfolio/github-128.png') }}" width="18" height="18" alt="GitHub"/></a></li>
+                            <li><a href="https://www.linkedin.com/pub/julien-renard/93/a7a/89" onclick="window.open(this.href); return false;"><img src="{{ asset('bundles/foxportfolio/linkedin-128.png') }}" width="18" height="18" alt="LinkedIn"/></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </div>
+                
+            <!-- Main component for a primary marketing message or call to action -->
+            <div class="jumbotron">
+      {% block content %}{% endblock %}
+            </div>
+                
+            <div class="cover-container">
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Copyright © 2014 Julien RENARD | Tous droits réservés</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+            
+            
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="{{ asset('bundles/foxportfolio/js/jquery.min.js')}}"></script>
+        <script src="{{ asset('bundles/foxportfolio/js/bootstrap.min.js')}}"></script>
+        <script type="text/javascript">
+            // auto adjust the height of
+            $('#textarea').on( 'keyup', 'textarea', function (e){
+                $(this).css('height', 'auto' );
+                $(this).height( this.scrollHeight );
+            });
+            $('#textarea').find( 'textarea' ).keyup();
+            
+            $('.collapse').collapse()
+        </script>
+    </body>
+</html>

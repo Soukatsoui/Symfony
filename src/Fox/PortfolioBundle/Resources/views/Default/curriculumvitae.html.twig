@@ -1,0 +1,142 @@
+{% extends "::layout.html.twig" %}
+
+{% block title "Curriculum Vitae" %}
+
+{% block content %}
+<div class="titre">
+    <h1>Curriculum vitæ</h1>
+</div>
+    
+<div class="texte">
+    
+    <table border="0" cellpadding="0">
+        <tr>
+            <td width="500px" style="text-align: left;">
+                Julien RENARD <br/>
+            </td>
+            <td width="500px" style="text-align: right;">
+                Né le 13/01/1993<br/>
+                Titulaire du permis B
+            </td>
+        </tr>
+    </table> 
+</div>
+
+<div class="soustitre">Diplômes - Formations</div>
+    
+<div class="texte">
+    <em>2012 - 2014</em> : BTS Services Informatiques aux Organisations – Melun (77)<br/>
+    <em>2011 - 2012</em> : Première année de Licence Ingénierie Mathématique et Informatique – Champs-sur-Marne (77)<br/>
+    <em>2009 - 2011</em> : Baccalauréat Scientifique option Sciences de l'Ingénieur – Melun (77)<br/>
+    <em>2008 - 2009</em> : Seconde générale – Melun (77)<br/>
+</div>
+
+<div class="soustitre">Compétences Informatiques</div>
+    
+<div class="texte">
+    <em>Systèmes d'exploitation</em> : Windows XP, Vista, 7, 8.1, Ubuntu, Debian, Android<br/>
+    <em>Logiciels</em> : Microsoft Office (Word, Excel, Powerpoint et leurs équivalents Libre Office), Eclipse, NetBeans, PhpStorm, FileZilla, Notepad++, Sublime Text<br/>
+    <em>Analyse</em> : UML<br/>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        <span class="glyphicon glyphicon-expand">&nbsp;Langages</span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            HTML
+                        </div>
+                    </div>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            CSS
+                        </div>
+                    </div>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            PHP
+                        </div>
+                    </div>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            SQL
+                        </div>
+                    </div>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            Java
+                        </div>
+                    </div>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            Android
+                        </div>
+                    </div>
+                    <div class="progress progress-striped">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                            Symfony2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="soustitre">Expériences professionnelles</div>
+
+<div class="texte">
+    <em>Janvier – Février 2014 (stage deuxième année BTS)</em> : Avec Passion – Bussy-Saint-Georges<br/>
+    Stagiaire en développement web. Création de requêtes SQL ainsi que d’une interface web simplifiée 
+    permettant leur personnalisation et exécution, ainsi que l’export du résultat sous forme de fichier .csv. 
+    <br/><br/>
+    <em>Mai – Juin 2012 (stage première année BTS)</em> : Mairie de Melun<br/>
+    Stagiaire au sein du service informatique de la Mairie de Melun. Fonction de support informatique, 
+    incluant la résolution de tickets, la descente d’image sur postes, ainsi que, d’une manière générale, 
+    la maintenance du parc informatique.
+</div>
+
+<div class="panel-group" id="accordion">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    <div class="soustitre">
+                        <span class="glyphicon glyphicon-expand">&nbsp;Compétences linguistiques</span>
+                    </div>
+                </a>
+            </h4>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        Français - Langue maternelle
+                    </div>
+                </div>
+                <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                        Anglais - Niveau B2
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="soustitre">Centres d’intérêts</div>
+
+<div class="texte">
+    <em>Informatique</em> : actualité des nouvelles technologies, développement d'applications mobiles, jeux vidéo
+    <br/><br/>
+    <em>Loisirs</em> : musique (DJing), cinéma
+</div>
+<div class="form-signin">
+    <a href="{{ path('fox_portfolio_default_curriculumvitaepdf')}}">
+        <button type="submit" class="btn btn-lg btn-primary btn-block">
+            <span class="glyphicon glyphicon-share-alt">&nbsp;</span>Version PDF téléchargeable
+        </button>
+    </a>
+</div>
+{% endblock %}

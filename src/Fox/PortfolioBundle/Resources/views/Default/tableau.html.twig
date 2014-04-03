@@ -1,0 +1,19 @@
+{% extends "::layout.html.twig" %}
+
+{% block title "Tableau de compétences" %}
+
+{% block content %}
+<div class="titre">
+    <h1>Tableau de compétences</h1>
+</div>
+<div id="cv">
+    <iframe src="{{ asset('bundles/foxportfolio/tableau_comp_renard_julien.pdf') }}" width="900px" height="1200px"></iframe>
+</div>
+<div class="form-signin">
+    <a href="{{ asset('bundles/foxportfolio/tableau_comp_renard_julien.pdf') }}" download="tableau_comp_renard_julien">
+        <button type="submit" class="btn btn-lg btn-primary btn-block">
+            <span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Télécharger
+        </button>
+    </a>
+</div>
+{% endblock %}

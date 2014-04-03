@@ -1,0 +1,106 @@
+{% extends "::layout.html.twig" %}
+    
+{% block title "Portfolio" %}
+    
+{% block content %}
+<div class="titre">
+    <h1>Bienvenue sur mon portfolio</h1>
+</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="{{ asset('bundles/foxportfolio/dev_android.png') }}" data-src="{{ asset('bundles/foxportfolio/dev_android.png') }}" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <a class="btn btn-lg btn-primary" href="{{ path('fox_portfolio_default_stifco')}}" role="button">
+                        <span class="glyphicon glyphicon-share-alt">&nbsp;StifCo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('bundles/foxportfolio/symfony2.jpg') }}" data-src="{{ asset('bundles/foxportfolio/symfony2.jpg') }}" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <a class="btn btn-lg btn-primary" href="{{ path('fox_portfolio_default_symfony')}}" role="button">
+                        <span class="glyphicon glyphicon-share-alt">&nbsp;Symfony2</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('bundles/foxportfolio/dev_java.png') }}" data-src="{{ asset('bundles/foxportfolio/dev_java.png') }}" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <a class="btn btn-lg btn-primary" href="{{ path('fox_portfolio_default_qog')}}" role="button">
+                        <span class="glyphicon glyphicon-share-alt">&nbsp;Quest of the Grail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('bundles/foxportfolio/tableau-comp.png') }}" data-src="{{ asset('bundles/foxportfolio/tableau-comp.png') }}" alt="Fourth slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <a class="btn btn-lg btn-primary" href="{{ path('fox_portfolio_default_tableau')}}" role="button">
+                        <span class="glyphicon glyphicon-share-alt">&nbsp;Tableau de compétences</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('bundles/foxportfolio/mariadb-logo.png') }}" data-src="{{ asset('bundles/foxportfolio/mariadb-logo.png') }}" alt="Fifth slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <a class="btn btn-lg btn-primary" href="{{ path('fox_portfolio_default_veille')}}" role="button">
+                        <span class="glyphicon glyphicon-share-alt">&nbsp;Veille technologique</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<div class="texte">
+    Je m’appelle Julien RENARD, j'ai 21 ans. Je suis actuellement étudiant en 2ème année de BTS SIO 
+    (<em>Services Informatiques aux Organisations</em>), spécialité SLAM (<em>Solutions Logicielles et Applications Métiers</em>).<br/><br/>
+    Par le biais de ce portfolio, vous pourrez découvrir mon parcours, consulter les projets que j'ai réalisés ou auxquels j'ai participé, ainsi que
+    consulter et télécharger mon <em>curriculum vitæ</em>. Vous pourrez également prendre contact avec moi par le biais du formulaire prévu à cet effet.
+</div>
+
+<div class="titre">
+    <h2>Bienvenue sur mon portfolio</h2>
+</div>
+
+<div class="texte">
+    Le nouveau BTS SIO (<em>Services Informatiques aux Organisations</em>), créé à la rentrée 2011, remplace le BTS 
+    Informatique de Gestion. Il forme les étudiants à la mise en place de <em>solutions informatiques au sein 
+        des entreprises</em> et comprend 2 options : la spécialité « solutions d’infrastructure, systèmes et réseaux » 
+    et la spécialité « solutions logicielles et applications métiers ».
+</div>
+
+<div class="titre">
+    <h2>Ma spécialité</h2>
+</div>
+    
+<div class="texte">	
+    Le diplômé du BTS SIO Spécialité « Solutions logicielles et applications métiers », à la différence de la spécialité Solutions d’infrastructure, systèmes et réseaux, va s’attacher à fournir des <em>services</em> orientés solutions logicielles et applicatives : par exemple le <em>développement de logiciels personnalisés</em>.                      
+    <br/><br/>                           
+    Il participera à toutes les phases de la production des <em>solutions logicielles</em> mises en place : <br/>                      
+    <ul>
+        <li>la définition du cahier des charges, en prenant en compte les besoins des utilisateurs finaux et les contraintes propres à l’entreprise cliente,</span> <br/> </li>
+        <li>le choix des solutions techniques,<br/></li>
+        <li>la réalisation des applications logicielles,<br/></li>
+        <li>leur mise en place au sein de l’organisation, et l’assistance apportée aux utilisateurs.<br/></li>
+    </ul>
+</div>
+{% endblock %}

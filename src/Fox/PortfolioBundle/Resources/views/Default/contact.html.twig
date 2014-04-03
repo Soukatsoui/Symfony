@@ -1,0 +1,29 @@
+{% extends "::layout.html.twig" %}
+
+{% block title "Contact" %}
+
+{% block content %}
+<div class="titre">
+    <h1>Contact</h1>
+</div>
+{{ form_start(form,{'attr': {'class': 'form-signin'}}) }}
+    {{ form_errors(form) }}
+
+    <div>
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name) }}
+    </div>
+
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email) }}
+    <div id="textarea">
+        {{ form_errors(form.message) }}
+        {{ form_widget(form.message) }}
+    </div>
+
+<button type="submit" class="btn btn-lg btn-primary btn-block">
+    <span class="glyphicon glyphicon-send">&nbsp;</span>Envoyer</button>
+
+{{ form_end(form) }}
+  
+{% endblock %}

@@ -1,0 +1,5 @@
+fox_portfolio:
+    resource: "@FoxPortfolioBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

@@ -1,0 +1,17 @@
+{% extends "::layout.html.twig" %}
+
+{% block title "Curriculum Vitae" %}
+
+{% block content %}
+<h1>Mon Curriculum Vitae</h1>
+<div id="cv">
+    <iframe src="{{ asset('bundles/foxportfolio/cv_renard_julien.pdf') }}" width="900px" height="1200px"></iframe>
+</div>
+<div class="form-signin">
+    <a href="{{ asset('bundles/foxportfolio/cv_renard_julien.pdf') }}" download="cv_renard_julien">
+        <button type="submit" class="btn btn-lg btn-primary btn-block">
+            <span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Télécharger
+        </button>
+    </a>
+</div>
+{% endblock %}
