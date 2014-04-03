@@ -50,26 +50,18 @@
         informatique (GLPI + OCS)</em> sur un site intranet, que nous pouvions consulter afin de les traîter.
 </div>
     
-<div class="soustitre">Résolution des tickets</div>
+<div class="soustitre">Création d'un interface</div>
     
 <div class="texte">
-    Nous pouvions, soit nous-même nous attribuer des tickets, soit nous le voir attribuer par un pôle du service.
-    Pour résoudre un ticket, nous devions ><em>appeler son créateur</em> pour avoir de plus amples informations et pouvoir intervenir.
+    Afin de faciliter la tâche aux co-gérantes, j'ai pris l'<em>initiative</em> de créer une <em>interface web en PHP</em> permettant l'exécution 
+    des requêtes sans avoir à passer par phpMyAdmin, ainsi que de les <em>personnaliser</em> via des renseignements à saisir sur les pages, qui sont 
+    récupérés dans des variables grâce à la <em>méthode POST</em>, et intégrés aux requêtes.
 </div>
     
-<div class="soustitre">Interventions</div>
+<div class="soustitre">Export sous fichier CSV</div>
     
 <div class="texte">
-    Pour une intervention, il nous était possible de nous déplacer dans les services peu éloignés.
-    Pour les services plus distants, nous avions la possibilité de <em>prendre la main sur le poste</em> (via VNC ou TeamViewer), avec 
-    l'accord préalable de l'utilisateur, afin de procéder à la résolution du problème.
-</div>
-    
-<div class="soustitre">Installation d'un serveur web</div>
-    
-<div class="texte">
-    Afin d'effectuer des opérations rentrant un minimum dans notre option, nous avons eu la possibilité d'<em>installer un serveur web</em> 
-    et d'<em>y installer Joomla</em> afin de créer un nouveau site Intranet pour l'Hôtel de Ville.
-    Malheureusement, ce projet n'a pu aboutir, faute de temps.
+    De manière à <em>faciliter le traitement des informations</em> retournées par les requêtes, un <em>export sous fichier CSV</em> a été implémenté, avec un nom 
+    pertinent généré pour chaque fichier.
 </div>
 {% endblock %}
