@@ -6,6 +6,58 @@
 <div class="titre">
     <h1>Mission StifCo</h1>
 </div>
-<p>Je suis Julien Renard. Actuellement en seconde année de BTS SIO, Services Informatiques aux Organisations, option SLAM, 
-    Solutions Logicielles Application Métier.</p>
+<div class="texte">
+    
+    <div class="centrer">
+        <img src="{{ asset('bundles/foxportfolio/android-logo.jpg') }}">
+    </div>                       
+</div>
+
+<div class="soustitre">Contexte</div>
+
+<div class="texte">
+    Le <em>projet StifCo</em> est une application développée sur le <em>système d'exploitation Android</em> permettant à ses 
+    utilisateurs de <em>proposer des déplacements</em> d'une ville à une autre et ainsi permettre à d'autres utilisateurs d'<em>utiliser 
+    ces propositions</em> pour se déplacer à destination de la gare d'une ville pour <em>échapper aux limitations de déplacement</em> 
+    liées aux horaires de bus et de trains : StifCo se base donc sur le système du covoiturage.<br/><br/>
+    L'<em>application web StifCo</em> fournie (infrastructure web et base de données) permet la <em>gestion d'inscription</em> et l'<em>authentification 
+    d'un utilisateur</em> : l'inscription ne se fait que sur l'application web. L'authentification, quant à elle, s'effectue <em>lors de l'utilisation 
+    de l'application</em> StifCo sur Android. Une fois l'utilisateur authentifié sur l'application Android, elle gère aussi l'<em>enregistrement d'un 
+    déplacement</em> à l'aide des informations récupérées par le formulaire de la section <em>« Proposer un déplacement »</em> de l'application Android. 
+    Ces informations sont la <em>date</em> (traitée afin de déterminer pour quel mois l'utilisateur a proposé son déplacement), la <em>ville de départ</em>, 
+    le <em>lieu de départ</em> (mairie, église ou poste), le <em>nombre de places disponibles</em> (minimum 1 passager et 3 maximum) et la <em>ville de destination</em> 
+    (le déplacement s'effectue obligatoirement jusqu'à la gare de la ville).<br/><br/>
+    L'<em>application Android StifCo</em> fournie est composée d'une partie <em>« Proposer un déplacement »</em> et d'une partie <em>« Rechercher un déplacement »</em> 
+    nécessitant toutes deux, au préalable d'une utilisation, une <em>authentification</em>. Cette première partie est <em>déjà opérationnelle</em> : 
+    elle enregistre un déplacement proposé par un utilisateur enregistré dans la <em>base de données</em>, qui sera visible ensuite par les utilisateurs 
+    souhaitant <em>trouver un déplacement</em> correspondant aux conditions de celui-ci.
+</div>
+
+<div class="soustitre">Problématique</div>
+
+<div class="texte">
+    L'application StifCo sur Android possède une section <em>« Rechercher un déplacement »</em> mais celle-ci n'a pas été développée et donc ne 
+    permet pas d’effectuer sa fonctionnalité qui est d'<em>afficher les déplacements</em> selon des critères de sélection via un formulaire. 
+    L'application web StifCo, quant à elle, ne possède pas les scripts nécessaires à la <em>gestion des informations recueillies</em> par le formulaire 
+    de la partie <em>« Rechercher un déplacement »</em>.
+</div>
+
+<div class="soustitre">Réalisation</div>
+
+<div class="texte">
+    La conception de la partie <em>« Rechercher un déplacement »</em> se divise en 3 étapes due à la complexité de la gestion de l'information. 
+    La première de ces étapes consiste à <em>créer une interface</em> dans laquelle se trouve un formulaire afin de <em>récolter les informations</em> 
+    saisies par l'utilisateur dans sa <em>recherche de déplacement</em>. Pour cela, nous avons créé une activité « Rechercher.java », qui va 
+    <em>gérer la saisie et l'envoi</em> des différentes informations du formulaire vers l'<em>application web</em> afin de traiter les données, 
+    et une vue <em>« recherche.xml »</em> pour l'affichage du formulaire. Les informations du formulaire de l'application Android sont envoyées au 
+    fichier <em>« rechercher.php »</em>, fichier appartenant à l'application web.<br/><br/>
+    Ce script <em>« rechercher.php »</em> réalise la deuxième étape de notre partie. Sa fonction est de <em>traiter les informations</em> reçues par le 
+    formulaire : il va rechercher dans la <em>base de données</em> si, premièrement, la table du mois de la date est existante (exemple : février), dans 
+    le cas où elle n'existe pas, le fichier renvoie un message qui est ensuite affiché dans l'application. Si la table existe, le fichier effectue une 
+    <em>requête SQL</em> sur la table en recherchant les déplacements correspondants aux <em>critères de sélection</em>, transforme le résultat en code 
+    <em>« json »</em> et la renvoie dans une variable de type « String », or s'il n'en existe pas, il renvoie un message à l'application Android.<br/><br/>
+    La variable de type « String » est récupérée par l'application Android pour la troisième étape et est traitée dans une <em>nouvelle activité</em> que 
+    l'on a nommée <em>« Afficher.java »</em>. Cette activité permet de <em>« Parser » la variable</em> et ainsi permettre une lecture de son contenu pour 
+    en retirer les informations nécessaires à l'utilisateur et ensuite pour l'afficher dans une vue appelée « affiche.xml ».
+</div>
 {% endblock %}
