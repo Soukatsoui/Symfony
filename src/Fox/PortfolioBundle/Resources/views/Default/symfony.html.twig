@@ -12,6 +12,40 @@
         <img src="{{ asset('bundles/foxportfolio/symfony-logo.png') }}">
     </div>                       
 </div>
-<p>Je suis Julien Renard. Actuellement en seconde année de BTS SIO, Services Informatiques aux Organisations, option SLAM, 
-    Solutions Logicielles Application Métier.</p>
+
+<div class="soustitre">Contexte</div>
+
+<div class="texte">
+    Le <em>portfolio</em> est une application sur laquelle le candidat pourra s'appuyer et devra utiliser lors de son épreuve E6, 
+    nécessaire dans l'obtention du BTS SIO. Elle doit <em>présenter le candidat</em> rapidement et efficacement et permettre une <em>navigation simple 
+    et explicite</em> pour permettre au jury de visionner l'ensemble de l'application sans trop de difficultés. Le choix du <em>framework « Symfony2 »</em> 
+    s'est porté pour l'application afin de permettre au candidat d'avoir le <em>support réclamé</em> pour son épreuve E6 et ainsi passer dans les 
+    conditions nécessaires mais aussi pour lui permettre d'effectuer une <em>mission professionnelle</em> sur un framework, comme demandé dans le 
+    référentiel de l'épreuve E4 du BTS SIO option SLAM.
+</div>
+
+<div class="soustitre">Problématique</div>
+
+<div class="texte">
+    Le candidat a besoin d'un <em>portefeuille de compétences</em>, autrement dit, un portfolio qu'il est préférable de réaliser sous <em>format numérique</em>. 
+    De plus, le candidat a également besoin d'une mission professionnelle, dans le cadre de l'E4, basée sur le développement d'une <em>application web</em> à 
+    l'aide d'un framework. L'application est pour l'instant inexistante et ne possède donc pas d'architecture.
+</div>
+
+<div class="soustitre">Réalisation</div>
+
+<div class="texte">
+    Tout d’abord, nous devons importer le code téléchargé sur le site Symfony.com et créer un bundle, que l'on nommera <em>« PortfolioBundle »</em>. Une 
+    fois le projet Symfony créé, nous devons paramétrer le framework pour ensuite l'utiliser correctement. Une fois paramétré, nous pouvons désormais 
+    importer le projet « Portfolio » dans un <em>environnement de développement</em> tel qu'Eclipse ou NetBeans. L’environnement de développement utilisé 
+    a été NetBeans.<br/><br/>
+    La principale tâche est de concevoir les relations entre les <em>« modèles »</em>, les <em>« vues »</em> et les <em>« contrôleurs »</em> ainsi que les 
+    actions des composants et la réaction attendue d'un autre composant suite à une action. Ces actions sont principalement des méthodes afin de renvoyer 
+    l'utilisateur vers une la page qu'il souhaite consulter.<br/><br/>
+    La seconde tâche est de créer un <em>code HTML et CSS</em> permettant un affichage propre et simple des pages pour une meilleure visibilité et lisibilité 
+    du contenu par l'utilisateur ainsi qu'une aisance dans la navigation entre les pages, d'une part, grâce au nommage des pages qui est explicite, et d'autre 
+    part, par la simplicité des liens : il n'y a pas besoin de cliquer sur de multiples liens pour atteindre ce que l'on recherche.<br/><br/>
+    La bannière au sommet des pages comporte tous les liens essentiels qui permettent à l'utilisateur de naviguer dans l'application sans se soucier de la 
+    nature du contenu de la page : le nom explicite indique quelle est la nature du contenu sur lequel se dirige l'utilisateur.
+</div>
 {% endblock %}
